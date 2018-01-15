@@ -32,7 +32,7 @@ def registerView(request):
 			messages.warning(request, "passwords do not match", fail_silently=True)
 			return render(request, 'login.html')
 
-    	user = User.objects.create_user(username=username, email=email)
+    	user = User.objects.create_user(username=username,email=email)
     	user.set_password(password1)
     	user.save()
     	user.backend = 'django.contrib.auth.backends.ModelBackend'
