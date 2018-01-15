@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login, Register form</title>
+  
+    <link rel="stylesheet" href="/static/css/normalize.min.css">
+
+<!--   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'> -->
+
+      <link rel="stylesheet" href="/static/css/login.css">
+
+  
+</head>
+
+<body style="background-color: #512da8">
+
+  
+  <div style="margin-top: 10%;" class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+      <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <div class="social-login">
+      <a href="#">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="#">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+    </div>
+    <form class="email-login" action={% url 'login:loginView' %} method="post">
+      {% csrf_token %}
+      <div class="u-form-group">
+        <input type="email" name="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" name="pass" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button style="background-color: #512da8">Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+    <form class="email-signup" action={% url 'login:registerView' %} method="post">
+      {% csrf_token %}
+     <!--  <div class="u-form-group">
+        <input type="text" name="uname" placeholder="UserName"/>
+      </div> -->
+      <div class="u-form-group">
+        <input type="email" name="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" name="pass" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" name="cpass" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+        <button  style="background-color: #512da8">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  <script src='/static/js/jquery-2.1.1.min.js'></script>
+  
+
+    <script  src="/static/js/login.js"></script>
+
+
+
+
+</body>
+
+</html>

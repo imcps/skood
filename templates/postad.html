@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Material Form with Horiz. Stepper</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+      <link rel="stylesheet" href="/static/css/postad.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <h5>This is the Form</h5>
+  
+  <!-- HORIZONTAL STEPPER -->
+  <div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__supporting-text">
+      <div class="mdl-stepper-horizontal-alternative">
+        <div id="stepper1" class="mdl-stepper-step active-step editable-step">
+          <div class="mdl-stepper-circle"><span>1</span></div>
+          <div class="mdl-stepper-title">Place</div>
+          <div class="mdl-stepper-optional">Where it is?</div>
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+        </div>
+        <div id="stepper2" class="mdl-stepper-step">
+          <div class="mdl-stepper-circle"><span>2</span></div>
+          <div class="mdl-stepper-title">Organizer</div>
+          
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+        </div>
+       <!--  <div id="stepper3" class="mdl-stepper-step">
+          <div class="mdl-stepper-circle"><span>3</span></div>
+          <div class="mdl-stepper-title">Event info</div>
+          <div class="mdl-stepper-optional">Optional</div>
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+   <!-- end HORIZONTAL STEPPER -->
+  
+  <!-- STEPS -->
+  <div class="stepper">
+    <div id="step1" class="step">
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Event title" id="title" type="text" class="validate">
+              <label for="title">Title</label>
+            </div>
+          </div>
+
+           <div class="row">
+            <div class="input-field col s6">
+              <select>
+          <option value="" disabled selected>Category</option>
+          <option value="1">Electronics</option>
+          <option value="2">Vehicles</option>
+          <option value="3">Notes</option>
+        </select>
+              <label>category</label>
+            </div>
+            
+            <!-- <div class="input-field col s6">
+              <select multiple>
+          <option value="" disabled selected>Choose style(s)</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+              <label>Styles</label>
+            </div> -->
+          </div> 
+
+          <a id="next1" class="waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>NEXT</a>
+        
+    </div>
+    <div id="step2" class="step hide">
+      
+          <div class="row">
+            <div class="input-field col s6">
+              <label>Begin date</label>
+              <input id="beginDate" type="date" class="datepicker">
+
+            </div>
+            <div class="input-field col s6">
+              <label>End date</label>
+              <input id="endDate" type="date" class="datepicker">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Who is organizing the event?" id="organizer" type="text" class="validate">
+              <label for="organizer">Organizer</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="http://www.mywebsite.com" id="website" type="text" class="validate">
+              <label for="website">Website</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="contact@myweb.com" id="email" type="text" class="validate">
+              <label for="email">Contact email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="description" class="materialize-textarea" length="140"></textarea>
+              <label for="description">Describe the event in a tweet!</label>
+            </div>
+          </div>
+          <a id="previous2" class="waves-effect waves-light btn"><i class="material-icons left">keyboard_arrow_left</i>PREVIOUS</a>
+          <a id="" class="waves-effect waves-light btn"><i class="material-icons right">keyboard_arrow_right</i>NEXT</a>
+        </div>
+
+    <!-- <div id="step3" class="step hide">
+      
+          <div class="row">
+            <div class="input-field col s6">
+              <label>Begin date</label>
+              <input id="beginDate" type="date" class="datepicker">
+
+            </div>
+            <div class="input-field col s6">
+              <label>End date</label>
+              <input id="endDate" type="date" class="datepicker">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Who is organizing the event?" id="organizer" type="text" class="validate">
+              <label for="organizer">Organizer</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="http://www.mywebsite.com" id="website" type="text" class="validate">
+              <label for="website">Website</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="contact@myweb.com" id="email" type="text" class="validate">
+              <label for="email">Contact email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="description" class="materialize-textarea" length="140"></textarea>
+              <label for="description">Describe the event in a tweet!</label>
+            </div>
+          </div>
+          <a id="previous3" class="waves-effect waves-light btn"><i class="material-icons left">keyboard_arrow_left</i>PREVIOUS</a>
+          <a id="finish" class="waves-effect waves-light btn"><i class="material-icons right">done_all</i>FINISH</a>
+        </div> -->
+
+      
+  </div>
+  <!-- end STEPS -->
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.js'></script>
+
+  
+
+    <script  src="/static/js/postad.js"></script>
+
+
+
+
+</body>
+
+</html>

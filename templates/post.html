@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post advertisement</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="/static/css/post.css">
+
+  
+</head>
+
+<body>
+
+  <!-- multistep form -->
+<form id="msform" enctype="multipart/form-data" method="post" action={% url 'home:postAd' %}>
+  <!-- progressbar -->
+  {% csrf_token %}
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Post an Ad</h2>
+    <input type="text" name="title" placeholder="Title" />
+    <select name="category">
+      <option value="" disabled selected>Select your category</option>
+      <option value="Vehicle" name="category">Vehicle</option>
+      <option value="Books" name="category">Books</option>
+      <option value="Electronics" name="category">Electronics</option>
+      <!-- <option value="audi">Audi</option> -->
+    </select>
+   <!--  <input type="text" name="email" placeholder="Ad Description" col=10 /> -->
+    <textarea name="description" placeholder="Description"></textarea>
+    <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+    <input type="file" name="image"/>
+    <input type="text" name="price" placeholder="Price" />
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="number" maxlength="10" placeholder="Mobile number" />
+    <textarea name="address" placeholder="Address"></textarea>
+    <!-- <input type="textarea" name="address" placeholder="Address" /> -->
+    <!-- <input type="button" name="next"  value="Next" /> -->
+    <button type="submit" class="next action-button" form="msform" value="Submit">Submit</button>
+  </fieldset>
+  
+</form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+  
+
+    <script  src="/static/js/post.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PHP Contact Form With Captcha - reusable form</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="/static/formfolder/form.css" >
+        <script src="/static/formfolder/form.js"></script>
+    </head>
+    <body >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>Post Ad!</h2>
+                    <form role="form" method="post" id="reused_form" action="">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name"> Title :</label>
+                            <input type="text" class="form-control" id="name" name="title" required maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"> Category :</label>
+                            <select name="category">
+                                <option value="">-- Select Category --</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Vehicles">Vehicles</option>
+                                <option value="Notes">Notes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name"> Ad Description :</label>
+                            <textarea class="form-control" type="textarea" name="description" id="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+                        </div>
+                        <hr style="border-top:1px solid #E5E0DF">
+                        <h2>Your Details! </h2>
+                        <hr style="border-top:1px solid #E5E0DF">
+                        <div class="form-group">
+                            <label for="name"> Name :</label>
+                            <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"> Number :</label>
+                            <input type="text" class="form-control" id="name" name="number" required maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"> Enter Hostel :</label>
+                            <input type="text" class="form-control" id="name" name="hostel" required maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"> Enter Room Number :</label>
+                            <input type="text" class="form-control" id="name" name="room" required maxlength="50">
+                        </div>
+                        <button type="submit">Post It! &rarr;</button>
+                    </form>
+                    <!-- <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Sent your message successfully!</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
