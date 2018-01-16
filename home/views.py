@@ -112,7 +112,8 @@ def buyRequest(request, user_id, pr_id):
 	n.notification = hola
 	# n.product = pr_id
 	n.save()
-	return JsonResponse(response)
+	y =  JsonResponse(response)
+	return redirect('/home')
 
 
 def nbc(request, seller_id, notification):

@@ -149,7 +149,7 @@ window.onclick = function(event) {
                 			<h4 class="plop">Notification</h4>
 								{% for x in notify reversed %}
 								<div> <p>{{ x.notification }} </p>
-									<a href={% url 'home:nbc' request.user x.notification %}>Sold</a> <a href={% url 'home:notYet' x.id %}>Not Yet!</a>
+									<a href={% url 'home:nbc' request.user.username x.notification %}>Sold</a> <a href={% url 'home:notYet' x.id %}>Not Yet!</a>
 								<div>
 								{% endfor %}
 							</div>	
