@@ -1,7 +1,7 @@
 cloudinary==1.6.0
 configparser==3.5.0
 dj-database-url==0.4.1
-Django==1.9
+Django==1.11.28
 django-allauth==0.26.1
 django-ckeditor==5.1.1
 django-material==1.2.0
